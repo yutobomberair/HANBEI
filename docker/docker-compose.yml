@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  scraper:
+    build:
+      context: ..
+      dockerfile: docker/scrape.Dockerfile
+    volumes:
+      - ../scraper:/app
+      - ../data:/data
+    working_dir: /app
+    tty: true
